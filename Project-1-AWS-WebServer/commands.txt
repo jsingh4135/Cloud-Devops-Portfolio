@@ -1,0 +1,31 @@
+PROJECT: AWS Scalable Web Server & Storage Management
+PERFORMED BY: Jitender Singh
+
+--- [ PART 1: Web Server Setup ] ---
+# 1. Switched to root user
+sudo su -
+
+# 2. Installed Apache Web Server
+yum update -y
+yum install httpd -y
+
+# 3. Started the Service
+systemctl start httpd
+systemctl enable httpd
+
+# 4. Created Custom Web Page
+echo "<h1>Welcome to Jitender's Cloud Server</h1>" > /var/www/html/index.html
+
+--- [ PART 2: Storage (EBS) Management ] ---
+# 1. Listed block devices to find new volume
+lsblk
+
+# 2. Formatted the 1GB EBS volume (xvdd)
+mkfs -t ext4 /dev/xvdd
+
+# 3. Created mount point and mounted volume
+mkdir /data
+mount /dev/xvdd /data
+
+# 4. Verified storage
+df -h
