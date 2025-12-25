@@ -1,5 +1,5 @@
 
-# 🚀 Cloud & DevOps Portfolio - Jitender Singh
+# 🚀 Cloud & DevOps Projects - Jitender Singh
 
 Hello! I am an aspiring Cloud Engineer. This repository documents my hands-on labs and practical projects in **Linux, Docker, and AWS**.
 
